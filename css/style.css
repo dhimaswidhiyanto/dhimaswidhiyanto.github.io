@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+* {
+	font-family: 'Red Hat Text', sans-serif;
+	color: hsl(345, 95%, 68%);
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.container {
+	height: 100vh; /* Use vh as a fallback for browsers that do not support Custom Properties */
+	height: calc(var(--vh, 1vh) * 100);
+	margin: 0 auto;
+	max-width: 100%;
+	background-color: hsl(235, 16%, 14%);
+	background-image: url(/images/bg-stars.svg);
+}
+
+/* ******** header ******** */
+.header {
+	align-items: center;
+	display: flex;
+	height: 33.33%;
+	justify-content: center;
+	position: relative;
+}
+
+#headline {
+	position: absolute;
+	width: 50%;
+	bottom: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	color: aliceblue;
+}
+
+/* ******** section ******** */
+.section {
+	position: relative;
+	align-items: center;
+	display: flex;
+	height: 33.33%;
+	justify-content: center;
+}
+
+.tick {
+	font-size: 4rem;
+	position: absolute;
+	top: 10px;
+}
+
+.tick-label {
+	font-size: .175em;
+	text-align: center;
+	text-transform: uppercase;
+	color: hsl(237, 18%, 59%);
+}
+
+.tick-group {
+	margin: 0 .25em;
+	text-align: center;
+}
+
+/* ******** footer ******** */
+.footer {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 33.33%;
+	justify-content: center;
+	background-image: url(/images/pattern-hills.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.socmed-btn {
+	display: flex;
+	justify-content: center;
+}
+
+.socmed-btn a {
+	width: 50px;
+	margin: 10px;
+	text-align: center;
+	line-height: 20px;
+}
+
+.attribution {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: .75em;
+	color: aliceblue;
+}
+.attribution a {
+	text-decoration: none;
+	color: hsl(228, 45%, 44%);
+}
+
+@media all and (max-width: 550px) {
+	.tick {
+		font-size: 2rem;
+	}
+}
+
+@media all and (max-width: 440px) {
+	.header h1 {
+		font-size: 1rem;
+	}
+
+	.socmed-btn a {
+		width: 30px;
+		margin: 10px;
+		text-align: center;
+		line-height: 20px;
+	}
+
+	.tick {
+		font-size: 1.5rem;
+	}
+}
+
+@media all and (max-width: 330px) {
+	.header h1 {
+		font-size: .7rem;
+	}
+
+	.tick {
+		font-size: 1rem;
+	}
+}
