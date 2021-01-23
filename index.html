@@ -65,7 +65,7 @@
 
     <script>
         function handleTickInit(tick) {
-            var nextYear = new Date("February 23, 2021 00:00:00");
+            var nextYear = new Date("2021-02-21 00:00:00");
             Tick.count.down(nextYear + '-01-01').onupdate = function (value) {
                 tick.value = value;
             };
