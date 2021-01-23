@@ -65,11 +65,13 @@
 
     <script>
         function handleTickInit(tick) {
-            var nextYear = new Date("2021-02-21 00:00:00");
-            Tick.count.down(nextYear + '-01-01').onupdate = function (value) {
+            var arr = "2021-03-15 10:30:00".split(/[- :]/),
+                date = new Date(arr[0], arr[1] - 1, arr[2], arr[3], arr[4], arr[5]);
+
+            // var nextYear = new Date("2021-02-21 00:00:00");
+            Tick.count.down(date + '-01-01').onupdate = function (value) {
                 tick.value = value;
             };
-        }
 
         // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
         let vh = window.innerHeight * 0.01;
